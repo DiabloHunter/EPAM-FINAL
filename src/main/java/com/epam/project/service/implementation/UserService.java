@@ -46,6 +46,21 @@ public class UserService implements IUserServ {
             throw new UnknownUserException();
         }
     }
+    @Button
+    @Override
+    public User findUserById(Integer id) throws UnknownUserException{
+        User user = new User();
+        try {
+            daoFactory.open();
+            userDao = daoFactory.getUserDao();
+            user = userDao.findUserById(id);
+            daoFactory.close();
+            return user;
+        } catch (DataBaseConnectionException | DataNotFoundException ex) {
+            log.error(ex);
+            throw new UnknownUserException();
+        }
+    }
 
     @Button
     @Override

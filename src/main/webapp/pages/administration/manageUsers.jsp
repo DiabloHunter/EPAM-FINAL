@@ -88,10 +88,11 @@
                 <td class="tdl"><c:out value="${user.address}"/></td>
                 <td class="tdl"><c:out value="${user.notes}"/></td>
                 <td class="tdc">
-                    <form name="details" method="post" action="project" >
-                        <input type="hidden" name="command" value="editUserByAdmin" />
-                        <input type="hidden" name="id" value="${user.id}" />
-                        <button type="submit" class="smallbutton">
+                    <form name="getUserDetailsForm" method="post" action="project" >
+                        <input type="hidden" name="command" value="getUserDetails" />
+                        <input type="hidden" name="edit" value="false" />
+<%--                        <input type="hidden" name="userId" value="${user.id}" />--%>
+                        <button type="submit" class="smallbutton" name="userId" value="${user.id}">
                             <fmt:message key="manageUsers.detailed" bundle="${buttons}"/>
                         </button>
                     </form>

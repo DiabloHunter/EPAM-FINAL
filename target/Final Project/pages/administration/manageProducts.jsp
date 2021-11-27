@@ -54,16 +54,14 @@
                     <fmt:formatNumber value="${product.cost}" maxFractionDigits="2" minFractionDigits="2"/>
                     <fmt:message key="currency" bundle="${legend}"/>
                 </td>
-                <c:if test="${product.quantity>0.0}">
-                    <td class="tdc" style="color: green">
-                        <fmt:message key="manageProducts.inStock" bundle="${legend}"/>
-                    </td>
-                </c:if>
-                <c:if test="${product.quantity==0.0}">
-                    <td class="tdc" style="color: darkred">
-                        <fmt:message key="manageProducts.outOfStock" bundle="${legend}"/>
-                    </td>
-                </c:if>
+                <c:choose>
+                    <c:when test="${(product.quantity==0.0 || product.available == false)}">
+                        <td class="tdc" style="color: darkred"><fmt:message key="main.outOfStock" bundle="${legend}"/></td>
+                    </c:when>
+                    <c:otherwise>
+                        <td class="tdc" style="color: green"><fmt:message key="main.inStock" bundle="${legend}"/></td>
+                    </c:otherwise>
+                </c:choose>
                 <td class="tdc"><c:out value="${product.quantity}"/></td>
                 <td class="tdc"><c:out value="${product.reservedQuantity}"/></td>
                 <td class="tdc"><c:out value="${product.notesRu}"/></td>

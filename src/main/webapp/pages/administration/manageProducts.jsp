@@ -62,16 +62,6 @@
                         <td class="tdc" style="color: green"><fmt:message key="main.inStock" bundle="${legend}"/></td>
                     </c:otherwise>
                 </c:choose>
-               <%-- <c:if test="${product.quantity>0.0}">
-                    <td class="tdc" style="color: green">
-                        <fmt:message key="manageProducts.inStock" bundle="${legend}"/>
-                    </td>
-                </c:if>
-                <c:if test="${product.quantity==0.0}">
-                    <td class="tdc" style="color: darkred">
-                        <fmt:message key="manageProducts.outOfStock" bundle="${legend}"/>
-                    </td>
-                </c:if>--%>
                 <td class="tdc"><c:out value="${product.quantity}"/></td>
                 <td class="tdc"><c:out value="${product.reservedQuantity}"/></td>
                 <td class="tdc"><c:out value="${product.notesRu}"/></td>

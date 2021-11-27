@@ -11,9 +11,9 @@ import com.epam.project.service.IUserServ;
 import com.epam.project.service.ServiceFactory;
 import org.apache.log4j.Logger;
 
-public class CommandSaveUserProfile implements ICommand {
+public class CommandSaveUserProfileAsAdmin implements ICommand {
 
-    private static final Logger log = Logger.getLogger(CommandSaveUserProfile.class);
+    private static final Logger log = Logger.getLogger(CommandSaveUserProfileAsAdmin.class);
 
     @Override
     public ExecutionResult execute(SessionRequestContent content) {
@@ -38,8 +38,7 @@ public class CommandSaveUserProfile implements ICommand {
             user.setNotes(notes);
             IUserServ userServ = ServiceFactory.getUserService();
             if (userServ.updateUser(user)) {
-                result.setPage(conf.getPage("redirect_home"));
-                result.addSessionAttribute("user", user);
+                result.setPage(conf.getPage("redirect_manageUsers"));
             }
             else {
                 result.addRequestAttribute("errorMessage", conf.getErrorMessage("saveUserProfileErr"));

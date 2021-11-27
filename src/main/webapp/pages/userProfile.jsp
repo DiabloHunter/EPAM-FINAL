@@ -24,6 +24,9 @@
             <p><fmt:message key="userProfile.name" bundle="${legend}"/><br/>
                 <b><i><c:out value="${sessionScope.get(\"user\").name}"/></i></b>
             </p>
+            <p><fmt:message key="userProfile.role" bundle="${legend}"/><br/>
+                <b><i><c:out value="${sessionScope.get(\"user\").userRole}"/></i></b>
+            </p>
             <p><fmt:message key="userProfile.email" bundle="${legend}"/><br/>
                 <b><i><c:out value="${sessionScope.get(\"user\").email}"/></i></b>
             </p>
@@ -47,6 +50,7 @@
         <input type="hidden" name="userId" value="<c:out value="${sessionScope.get(\"user\").id}"/>" />
         <h4><fmt:message key="userProfile.name" bundle="${legend}"/></h4>
         <input type="text" value="<c:out value="${sessionScope.get(\"user\").name}"/>" name="name" size="36" class="input" required/><br/>
+        <input type="hidden" value="<c:out value="${sessionScope.get(\"user\").userRole}"/>" name="userRole"   required/><br/>
         <h4><fmt:message key="userProfile.password" bundle="${legend}"/></h4>
         <input type="password" value="<c:out value="${sessionScope.get(\"user\").password}"/>" name="password" size="36" class="input" required/><br/><br/>
         <h4><fmt:message key="userProfile.tel" bundle="${legend}"/></h4>

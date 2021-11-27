@@ -3,6 +3,7 @@ package com.epam.project.dao.implementation;
 import com.epam.project.dao.GenericAbstractDao;
 import com.epam.project.dao.IUserDao;
 import com.epam.project.dao.Mapper;
+import com.epam.project.domain.Product;
 import com.epam.project.domain.User;
 import com.epam.project.domain.UserRole;
 import com.epam.project.exceptions.DataNotFoundException;
@@ -86,6 +87,10 @@ public class UserDaoImpl extends GenericAbstractDao<User> implements IUserDao {
     public User findUserById(Integer id) throws DataNotFoundException {
         return findBy(connection, User.class, SQL_selectById, id);
     }
+
+
+
+
 
     @Override
     public User findUserByName(String name) throws DataNotFoundException {

@@ -139,12 +139,7 @@
                         <td class="tdc" style="color: green"><fmt:message key="main.inStock" bundle="${legend}"/></td>
                     </c:otherwise>
                 </c:choose>
-               <%-- <c:if test="${product.quantity>0.0}">
-                    <td class="tdc" style="color: green"><fmt:message key="main.inStock" bundle="${legend}"/></td>
-                </c:if>
-                <c:if test="${(product.quantity==0.0 || product.available == false)}">
-                    <td class="tdc" style="color: darkred"><fmt:message key="main.outOfStock" bundle="${legend}"/></td>
-                </c:if>--%>
+
                 <td class="tdc"><c:out value="${lang == 'ru' ? product.notesRu : product.notesEn}"/></td>
                 <td class="tdc">
                     <form name="addProductForm" method="post" action="project" >
@@ -152,6 +147,12 @@
                         <input type="text" name="productQuantity" size="6" required/>
                         <button class="smallbutton" type="submit" name="productCode" value="${product.code}">
                             <fmt:message key="main.addToCart" bundle="${buttons}"/>
+                        </button>
+                    </form>
+                    <form name="getProductDetailsForm" method="post" action="project" >
+                        <input type="hidden" name="command" value="getProductDetails" />
+                        <button class="smallbutton" type="submit" name="productCode" value="${product.code}">
+                            <fmt:message key="main.productDetails" bundle="${buttons}"/>
                         </button>
                     </form>
                 </td>

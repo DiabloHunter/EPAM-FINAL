@@ -49,6 +49,14 @@ public interface IUserServ {
     User findUser(String name, String password) throws UnknownUserException;
 
     /**
+     * Finds user by User name and password
+     * @param id - User id
+     * @return user found by id
+     * @throws UnknownUserException if unable to retrieve information for certain reasons
+     */
+    User findUserById(Integer id) throws UnknownUserException;
+
+    /**
      * Adds a new user in DB
      * @param user - user to add
      * @return true if operation success and false if fails

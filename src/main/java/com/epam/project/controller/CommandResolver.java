@@ -20,6 +20,7 @@ public class CommandResolver {
         commands.put("main", new CommandOpenMainPage());
         commands.put("usersCart", new CommandOpenUsersCart());
         commands.put("addProductToCart", new CommandAddToCart());
+        commands.put("getProductDetails", new CommandOpenProductDetails());
         commands.put("removeProductFromCart", new CommandRemoveFromCart());
         commands.put("createInvoice", new CommandCreateInvoice());
         commands.put("createInvoiceAndPay", new CommandCreateInvoiceAndPay());
@@ -27,6 +28,8 @@ public class CommandResolver {
         commands.put("registerNewUser", new CommandSaveNewUser());
         commands.put("showUserProfile", new CommandOpenUserProfilePage());
         commands.put("saveUserProfile", new CommandSaveUserProfile());
+        commands.put("showProductDetails", new CommandShowProductDetails());
+        commands.put("changeLang", new CommandChangeLang());
         /** Commands available for Administration */
         commands.put("administration", new CommandOpenAdminPage());
         commands.put("manageInvoices", new CommandOpenInvoiceMngPage());
@@ -44,7 +47,10 @@ public class CommandResolver {
         commands.put("deleteProduct", new CommandDeleteProduct());
         commands.put("addNewPayment", new CommandAddNewPayment());
         commands.put("confirmPayment", new CommandConfirmPayment());
-        commands.put("changeLang", new CommandChangeLang());
+        commands.put("getUserDetails", new CommandOpenUserDetails());
+        commands.put("saveUserProfileAsAdmin", new CommandSaveUserProfileAsAdmin());
+        commands.put("viewUserProfile", new CommandShowUserDetails()); //useless
+
     }
 
     public ICommand getCommand(HttpServletRequest request) {

@@ -20,7 +20,6 @@
         <form name="LoginForm" method="get" action="project" >
             <input type="hidden" name="command" value="getUserDetails" />
             <input type="hidden" name="userId" value="${user.id}"/>
-            <input type="hidden" name="edit" value="true" />
             <div class="inner_div">
                 <%--<input type="text" name="code" size="24" class="input" value="${product.code}" required/><br/>--%>
                 <p><fmt:message key="userProfile.name" bundle="${legend}"/><br/>
@@ -42,10 +41,40 @@
                     <b><i><c:out value="${user.notes}"/></i></b>
                 </p>
             </div>
-            <button class="bigbutton"><fmt:message key="userProfile.edit" bundle="${buttons}"/></button>
+            <form name="LoginForm" method="get" action="project" >
+                <input type="hidden" name="command" value="getUserDetails" />
+                <input type="hidden" name="userId" value="${user.id}"/>
+                <input type="hidden" name="edit" value="true" />
+                <input type="hidden" name="delete" value="false" />
+                <button class="bigbutton"><fmt:message key="userProfile.edit" bundle="${buttons}"/></button>
+            </form>
+            <form name="LoginForm" method="get" action="project" >
+                <input type="hidden" name="command" value="getUserDetails" />
+                <input type="hidden" name="userId" value="${user.id}"/>
+                <input type="hidden" name="edit" value="false" />
+                <input type="hidden" name="delete" value="true" />
+                <button class="bigbutton">
+                    <fmt:message key="userProfile.delete" bundle="${buttons}"/>
+                </button>
+            </form>
+            <c:if test="${param.delete == true}">
+                <form name="LoginForm" method="get" action="project" >
+                    <input type="hidden" name="command" value="deleteUserAccount" />
+                    <input type="hidden" name="userId" value="${user.id}"/>
+                    <button class="bigbutton">
+                        <fmt:message key="userProfile.deleteConfirmation" bundle="${buttons}"/>
+                    </button>
+                    <button class="bigbutton" onclick="history.back(); return false;">
+                        <fmt:message key="userProfile.deleteNegation" bundle="${buttons}"/>
+                    </button>
+                </form>
+            </c:if>
             <button class="bigbutton" onclick="history.back(); return false;"><fmt:message key="userProfile.back" bundle="${buttons}"/></button>
         </form>
     </c:if>
+
+
+
     <c:if test="${param.edit == true}">
         <form name="LoginForm" method="post" action="project" >
             <input type="hidden" name="command" value="saveUserProfileAsAdmin" />

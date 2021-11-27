@@ -91,6 +91,7 @@
                     <form name="getUserDetailsForm" method="post" action="project" >
                         <input type="hidden" name="command" value="getUserDetails" />
                         <input type="hidden" name="edit" value="false" />
+                        <input type="hidden" name="delete" value="false" />
 <%--                        <input type="hidden" name="userId" value="${user.id}" />--%>
                         <button type="submit" class="smallbutton" name="userId" value="${user.id}">
                             <fmt:message key="manageUsers.detailed" bundle="${buttons}"/>

@@ -39,14 +39,16 @@
             <input type="checkbox" name="isAvailable" checked disabled/>
             <b><fmt:message key="productDetails.inStock" bundle="${legend}"/></b>
             <br/>
+            <h4><fmt:message key="productDetails.quantity" bundle="${legend}"/></h4>
+            <i><p>${product.quantity} ${product.uomEn}</p></i></b><br/>
         </c:if>
         <c:if test="${!product.available}">
             <input type="checkbox" name="isAvailable" disabled/>
             <b><fmt:message key="productDetails.inStock" bundle="${legend}"/></b>
             <br/>
+            <h4><fmt:message key="productDetails.quantity" bundle="${legend}"/></h4>
+            <i><p>0 ${product.uomEn}</p></i></b><br/>
         </c:if>
-        <h4><fmt:message key="productDetails.quantity" bundle="${legend}"/></h4>
-        <i><p>${product.quantity} ${product.uomEn}</p></i></b><br/>
         <h4><fmt:message key="productDetails.notesRu" bundle="${legend}"/></h4>
         <i><p>${product.notesRu}</p></i></b><br/>
         <h4><fmt:message key="productDetails.notesEn" bundle="${legend}"/></h4>

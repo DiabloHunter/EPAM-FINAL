@@ -49,6 +49,7 @@ public class CommandResolver {
         commands.put("confirmPayment", new CommandConfirmPayment());
         commands.put("getUserDetails", new CommandOpenUserDetails());
         commands.put("saveUserProfileAsAdmin", new CommandSaveUserProfileAsAdmin());
+        commands.put("deleteUserAccount", new CommandDeleteUser());
         commands.put("viewUserProfile", new CommandShowUserDetails()); //useless
 
     }

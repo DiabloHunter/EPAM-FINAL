@@ -76,4 +76,6 @@ public interface IUserServ {
      * @return true if operation success and false if fails
      */
     boolean deleteUser(User user);
+
+    boolean deleteUserById(Integer id);
 }

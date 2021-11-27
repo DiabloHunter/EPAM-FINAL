@@ -36,6 +36,8 @@ public class UserDaoImpl extends GenericAbstractDao<User> implements IUserDao {
             "WHERE user_id=?;";
     private static String SQL_deleteUser = "DELETE FROM project.users WHERE user_name=?;";
 
+    private static String SQL_deleteUserById = "DELETE FROM project.users WHERE user_id=?;";
+
     private Mapper<User, PreparedStatement> mapperToDB = (User user, PreparedStatement preparedStatement) -> {
         preparedStatement.setString(1, user.getName());
         preparedStatement.setString(2, user.getPassword());
@@ -110,5 +112,10 @@ public class UserDaoImpl extends GenericAbstractDao<User> implements IUserDao {
     @Override
     public boolean deleteUserFromDB(User user) {
         return deleteFromDB(connection, SQL_deleteUser, user.getName());
+    }
+
+    @Override
+    public boolean deleteUserFromDBById(Integer id) {
+        return deleteFromDB(connection, SQL_deleteUserById, id);
     }
 }

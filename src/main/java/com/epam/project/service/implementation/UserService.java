@@ -184,4 +184,20 @@ public class UserService implements IUserServ {
         }
         return result;
     }
+
+    @Button
+    @Override
+    public synchronized boolean deleteUserById(Integer id) {
+        boolean result;
+        try {
+            daoFactory.open();
+            userDao = daoFactory.getUserDao();
+            result = userDao.deleteUserFromDBById(id);
+            daoFactory.close();
+        } catch (DataBaseConnectionException ex) {
+            log.error(ex);
+            return false;
+        }
+        return result;
+    }
 }

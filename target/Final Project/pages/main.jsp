@@ -145,6 +145,7 @@
                     <form name="addProductForm" method="post" action="project" >
                         <input type="hidden" name="command" value="addProductToCart" />
                         <input type="text" name="productQuantity" size="6" required/>
+                        <input type="hidden" name="productQuantityFromDB" value="${(product.quantity)}" />
                         <button class="smallbutton" type="submit" name="productCode" value="${product.code}">
                             <fmt:message key="main.addToCart" bundle="${buttons}"/>
                         </button>

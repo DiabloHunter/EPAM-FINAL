@@ -37,7 +37,6 @@ public class TransactionServiceTest {
     }
 
     @Test
-    @Ignore
     public void findTransactionsTest() throws TransactionServiceException {
         List<Transaction> transactions = transactionService.findAllTransactions();
         log.info(transactions);

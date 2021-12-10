@@ -40,20 +40,6 @@ public class InvoiceService implements IInvoiceServ {
 
     /** CRUD methods */
 
-    @Override
-    public Integer calculateInvoicesNumber() {
-        Integer result = 0;
-        try {
-            daoFactory.beginTransaction();
-            invoiceDao = daoFactory.getInvoiceDao();
-            result = invoiceDao.calculateInvoiceNumber();
-            daoFactory.commitTransaction();
-        } catch (DataBaseConnectionException | DataNotFoundException ex) {
-            log.error(ex);
-        }
-        return result;
-    }
-
     @Button
     @Override
     public List<Invoice> findAllInvoices() {

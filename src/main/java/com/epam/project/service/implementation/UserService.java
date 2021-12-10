@@ -32,7 +32,7 @@ public class UserService implements IUserServ {
     @Button
     @Override
     public User findUser(String name, String password) throws UnknownUserException{
-        User user = new User();
+        User user;
         try {
             daoFactory.open();
             userDao = daoFactory.getUserDao();
@@ -49,7 +49,7 @@ public class UserService implements IUserServ {
     @Button
     @Override
     public User findUserById(Integer id) throws UnknownUserException{
-        User user = new User();
+        User user;
         try {
             daoFactory.open();
             userDao = daoFactory.getUserDao();
@@ -65,7 +65,7 @@ public class UserService implements IUserServ {
     @Button
     @Override
     public List<User> findAllUsers() throws UnknownUserException {
-        List<User> users = new LinkedList<>();
+        List<User> users;
         try {
             daoFactory.open();
             userDao = daoFactory.getUserDao();
@@ -81,7 +81,7 @@ public class UserService implements IUserServ {
     @Button
     @Override
     public List<User> findUsers(Integer from, Integer offset) throws UnknownUserException {
-        List<User> users = new LinkedList<>();
+        List<User> users;
         try {
             daoFactory.open();
             userDao = daoFactory.getUserDao();
@@ -97,7 +97,7 @@ public class UserService implements IUserServ {
     @Button
     @Override
     public List<User> findUsersByRole(UserRole userRole) throws UnknownUserException {
-        List<User> users = new LinkedList<>();
+        List<User> users;
         try {
             daoFactory.open();
             userDao = daoFactory.getUserDao();

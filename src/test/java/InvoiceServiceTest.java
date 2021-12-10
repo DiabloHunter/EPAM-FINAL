@@ -64,7 +64,6 @@ public class InvoiceServiceTest {
 
     /** tests */
     @Test
-    @Ignore
     public void findAllInvoicesTest() {
         List<Invoice> invoices = invoiceService.findAllInvoices();
         log.info(invoices);
@@ -72,7 +71,6 @@ public class InvoiceServiceTest {
     }
 
     @Test
-    @Ignore
     public void findNewInvoicesTest() {
         List<Invoice> newInvoices = invoiceService.findNewInvoices();
         log.info(newInvoices);
@@ -80,7 +78,6 @@ public class InvoiceServiceTest {
     }
 
     @Test
-    @Ignore
     public void findInvoicesByUserTest() {
         List<Invoice> invoicesByUser = invoiceService.findInvoicesByUser(USER_NAME);
         log.info(invoicesByUser);
@@ -88,7 +85,6 @@ public class InvoiceServiceTest {
     }
 
     @Test
-    @Ignore
     public void findInvoicesByOrderNumberTest() {
         Invoice invoice = invoiceService.findInvoiceByOrderNumber(ORDER_NUM);
         log.info(invoice);
@@ -96,7 +92,6 @@ public class InvoiceServiceTest {
     }
 
     @Test
-    @Ignore
     public void addInvoiceTest1() throws InvoiceServiceException {
         UserCart cart = createTestCart();
         testInvoice = createTestInvoice(cart);
@@ -104,14 +99,12 @@ public class InvoiceServiceTest {
     }
 
     @Test
-    @Ignore
     public void addInvoiceTest2() throws InvoiceServiceException {
         badInvoice = createBadInvoice();
         assertFalse(invoiceService.addInvoice(badInvoice));
     }
 
     @Test
-    @Ignore
     public void updateInvoiceTest() throws InvoiceServiceException {
         UserCart userCart = createTestCart();
         userCart.addProduct("D005", 20d);
@@ -123,7 +116,6 @@ public class InvoiceServiceTest {
     }
 
     @Test
-    @Ignore
     public void deleteInvoiceTest() {
         Invoice invoice = invoiceService.findInvoiceByOrderNumber(ORDER_NUM);
         boolean result = invoiceService.deleteInvoice(ORDER_NUM);
@@ -134,7 +126,6 @@ public class InvoiceServiceTest {
     }
 
     @Test
-    @Ignore
     public void removeProductFromInvoiceTest() {
         Invoice invoice = invoiceService.findInvoiceByOrderNumber(ORDER_NUM);
         boolean result = invoiceService.removeProductFromInvoice(ORDER_NUM, "D001");
@@ -145,7 +136,6 @@ public class InvoiceServiceTest {
     }
 
     @Test
-    @Ignore
     public void closeInvoiceTest() {
         Invoice invoice = invoiceService.findInvoiceByOrderNumber(ORDER_NUM);
         boolean result = invoiceService.closeInvoice(ORDER_NUM);
@@ -156,7 +146,6 @@ public class InvoiceServiceTest {
     }
 
     @Test
-    @Ignore
     public void cancelInvoiceTest() {
         Invoice invoice = invoiceService.findInvoiceByOrderNumber(ORDER_NUM);
         boolean result = invoiceService.cancelInvoice(ORDER_NUM);
@@ -167,7 +156,6 @@ public class InvoiceServiceTest {
     }
 
     @Test
-    @Ignore
     public void payByInvoiceTest() {
         Invoice invoice = invoiceService.findInvoiceByOrderNumber(ORDER_NUM);
         boolean result = invoiceService.payByInvoice(ORDER_NUM);

@@ -5,6 +5,7 @@
 <c:set value="${sessionScope.get(\"cart\")}" var="userCart" scope="page" />
 <c:set value="${sessionScope.get(\"user\")}" var="user" scope="page" />
 <c:set value="${pageScope.get(\"pageNum\")}" var="pageNum" scope="page" />
+<c:set value="${sessionScope.get(\"cash\")}" var="cash" scope="page" />
 <c:set value="${sessionScope.get(\"locale\").language}" var="lang" scope="page" />
 <fmt:setLocale value="${sessionScope.get(\"locale\")}" />
 <fmt:setBundle basename = "legend" var = "legend"/>
@@ -146,9 +147,16 @@
                         <input type="hidden" name="command" value="addProductToCart" />
                         <input type="text" name="productQuantity" size="6" required/>
                         <input type="hidden" name="productQuantityFromDB" value="${(product.quantity)}" />
-                        <button class="smallbutton" type="submit" name="productCode" value="${product.code}">
-                            <fmt:message key="main.addToCart" bundle="${buttons}"/>
-                        </button>
+                        <c:if test="${user.name == 'Guest' || user.userRole == 'USER'}">
+                            <button class="smallbutton" type="submit" name="productCode" value="${product.code}" disabled>
+                                <fmt:message key="main.addToCart" bundle="${buttons}"/>
+                            </button>
+                        </c:if>
+                        <c:if test="${user.name != 'Guest' && user.userRole != 'USER'}">
+                            <button class="smallbutton" type="submit" name="productCode" value="${product.code}">
+                                <fmt:message key="main.addToCart" bundle="${buttons}"/>
+                            </button>
+                        </c:if>
                     </form>
                     <form name="getProductDetailsForm" method="post" action="project" >
                         <input type="hidden" name="command" value="getProductDetails" />
@@ -172,5 +180,26 @@
         </div>
     </div>
     <t:colontitle />
+    <c:if test="${user.name != 'Guest' && user.userRole != 'USER' && user.userRole != 'MERCHANT'}">
+        <div id="overlay">
+            <div class="popup">
+                <center>
+                    <h1>Enter the cash in the cash machine:</h1>
+                    <form name="getCashBeforeWork" method="post" action="project" >
+                        <input type="text" name="getCashBeforeWork" size="6" required/>
+                        <button class="smallbutton" type="submit" name="getCashBeforeWork">
+                            <fmt:message key="main.productDetails" bundle="${buttons}"/>
+                        </button>
+                    </form>
+                </center>
+
+            </div>
+        </div>
+    </c:if>
+    <script type="text/javascript">
+        var delay_popup = 500;
+        setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
+    </script>
+
 </body>
 </html>

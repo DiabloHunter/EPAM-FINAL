@@ -1,0 +1,549 @@
+04-12-2021 15:39:29 INFO ProductServiceTest.init, line 27 -> Starting tests
+04-12-2021 15:39:30 ERROR ProductService.findProductByCode, line 118 -> com.epam.project.exceptions.DataNotFoundException: Data not found in DB by specified key
+04-12-2021 15:39:30 INFO ProductServiceTest.testAddProduct, line 71 -> 
+Product ID = null
+Product code = TEST001
+isAvailable: true
+nameEn: Royal Canin Kitten 30 - 120
+nameRu: Royal Canin Kitten 30 - 120
+descriptionEn: Royal Canin dry feed for kittens 30 - 120 month
+descriptionRu: Корм Роял Канин для котят в возрасте 30 - 120 месяцeв
+cost: 247.5
+quantity: 50.0
+reservedQuantity: 0.0
+uomEn: kg
+uomRu: кг
+notesEn: Created by ProductServiceTest
+notesRu: Сгенерировано классом ProductServiceTest
+---------------------------------------------------------------------------------------------------
+04-12-2021 15:39:30 INFO ProductServiceTest.close, line 38 -> Finishing tests
+04-12-2021 15:40:31 INFO ProductServiceTest.init, line 27 -> Starting tests
+04-12-2021 15:40:33 ERROR ProductService.findProductByCode, line 118 -> com.epam.project.exceptions.DataNotFoundException: Data not found in DB by specified key
+04-12-2021 15:40:33 INFO ProductServiceTest.testAddProduct, line 71 -> 
+Product ID = null
+Product code = TEST001
+isAvailable: true
+nameEn: Royal Canin Kitten 30 - 120
+nameRu: Royal Canin Kitten 30 - 120
+descriptionEn: Royal Canin dry feed for kittens 30 - 120 month
+descriptionRu: Корм Роял Канин для котят в возрасте 30 - 120 месяцeв
+cost: 247.5
+quantity: 50.0
+reservedQuantity: 0.0
+uomEn: kg
+uomRu: кг
+notesEn: Created by ProductServiceTest
+notesRu: Сгенерировано классом ProductServiceTest
+---------------------------------------------------------------------------------------------------
+04-12-2021 15:40:33 INFO ProductServiceTest.close, line 38 -> Finishing tests
+04-12-2021 15:43:44 INFO InvoiceServiceTest.init, line 30 -> Starting tests
+04-12-2021 15:43:45 INFO InvoiceServiceTest.findNewInvoicesTest, line 76 -> [
+Order Id =     1
+Order code:    1
+User name:     Yaroslav
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-06 11:28:06.0
+Order notes:   
+    Invoice:
+************************************************************************************************
+1   D009    Royal Canin Energy                               20,00pcs   Cost: 434,00
+2   D008    Royal Canin Maxi Adult                            7,00kg    Cost: 1039,50
+3   D006    Royal Canin Medium Adult                          5,00kg    Cost: 945,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     2
+Order code:    2
+User name:     Guest
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-06 11:28:06.0
+Order notes:   
+    Invoice:
+************************************************************************************************
+1   D003    Royal Canin Mini Junior                           3,00kg    Cost: 678,75
+2   D010    Royal Canin Educ                                 10,00pcs   Cost: 217,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     3
+Order code:    3
+User name:     Guest
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-06 11:28:06.0
+Order notes:   
+    Invoice:
+************************************************************************************************
+1   D010    Royal Canin Educ                                 50,00pcs   Cost: 1085,00
+2   D009    Royal Canin Energy                               50,00pcs   Cost: 1085,00
+3   D008    Royal Canin Maxi Adult                           20,00kg    Cost: 2970,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     7
+Order code:    1636300768198
+User name:     Yaroslav
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-07 17:59:28.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D003    Royal Canin Mini Junior                           1,00kg    Cost: 226,25
+2   D002    Royal Canin X-Small Adult                         2,00kg    Cost: 516,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     13
+Order code:    1636552422284
+User name:     Yaroslav
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-10 15:53:42.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D002    Royal Canin X-Small Adult                         1,00kg    Cost: 258,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     15
+Order code:    1636734337922
+User name:     Admin
+Is payd:       true
+Order status:  CREATED
+Order date:    2021-11-12 18:25:37.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D002    Royal Canin X-Small Adult                         1,00kg    Cost: 258,00
+2   D001    Royal Canin X-Small Junior                        1,00kg    Cost: 282,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     16
+Order code:    1637689843909
+User name:     Cashier
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-23 19:50:43.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     17
+Order code:    1637690743849
+User name:     Cashier
+Is payd:       true
+Order status:  CREATED
+Order date:    2021-11-23 20:05:43.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D001    Royal Canin X-Small Junior                        1,00kg    Cost: 282,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     18
+Order code:    1637691107039
+User name:     Cashier
+Is payd:       true
+Order status:  CREATED
+Order date:    2021-11-23 20:11:47.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D001    Royal Canin X-Small Junior                        1,00kg    Cost: 282,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     23
+Order code:    1637698090255
+User name:     Cashier
+Is payd:       true
+Order status:  CREATED
+Order date:    2021-11-23 22:08:10.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D004    Royal Canin Mini Adult                           10,00kg    Cost: 2162,50
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     25
+Order code:    1637699421609
+User name:     Merchant
+Is payd:       true
+Order status:  CREATED
+Order date:    2021-11-23 22:30:21.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D001    Royal Canin X-Small Junior                       10,00kg    Cost: 2820,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     26
+Order code:    1637748347790
+User name:     Merchant
+Is payd:       true
+Order status:  CREATED
+Order date:    2021-11-24 12:05:47.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D004    Royal Canin Mini Adult                            1,00kg    Cost: 216,25
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     28
+Order code:    1637749371357
+User name:     Admin
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-24 12:22:51.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D001    Royal Canin X-Small Junior                        1,00kg    Cost: 282,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     29
+Order code:    1638290361241
+User name:     Senior cashier
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-30 18:39:21.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     31
+Order code:    1638463438468
+User name:     Cashier
+Is payd:       true
+Order status:  CREATED
+Order date:    2021-12-02 18:43:58.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D001    Royal Canin X-Small Junior                        1,00kg    Cost: 282,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------]
+04-12-2021 15:43:45 ERROR InvoiceService.findInvoiceByOrderNumber, line 190 -> com.epam.project.exceptions.DataNotFoundException: Data not found in DB by specified key
+04-12-2021 15:43:45 ERROR GenericAbstractDao.deleteFromDB, line 135 -> java.sql.SQLException: No value specified for parameter 1
+04-12-2021 15:43:45 ERROR InvoiceService.findInvoiceByOrderNumber, line 190 -> com.epam.project.exceptions.DataNotFoundException: Data not found in DB by specified key
+04-12-2021 15:43:45 ERROR InvoiceService.findInvoiceByOrderNumber, line 190 -> com.epam.project.exceptions.DataNotFoundException: Data not found in DB by specified key
+04-12-2021 15:43:45 ERROR InvoiceService.findInvoiceByOrderNumber, line 190 -> com.epam.project.exceptions.DataNotFoundException: Data not found in DB by specified key
+04-12-2021 15:43:45 ERROR InvoiceService.findInvoiceByOrderNumber, line 190 -> com.epam.project.exceptions.DataNotFoundException: Data not found in DB by specified key
+04-12-2021 15:43:45 ERROR InvoiceService.findInvoiceByOrderNumber, line 190 -> com.epam.project.exceptions.DataNotFoundException: Data not found in DB by specified key
+04-12-2021 15:43:45 INFO InvoiceServiceTest.findInvoicesByOrderNumberTest, line 90 -> 
+Order Id =     null
+Order code:    null
+User name:     null
+Is payd:       null
+Order status:  null
+Order date:    null
+Order notes:   null
+    Invoice:
+************************************************************************************************
+************************************************************************************************
+------------------------------------------------------------------------------------------------
+04-12-2021 15:43:45 INFO InvoiceServiceTest.findAllInvoicesTest, line 69 -> [
+Order Id =     14
+Order code:    1636552431728
+User name:     Yaroslav
+Is payd:       true
+Order status:  CANCELLED
+Order date:    2021-11-10 15:53:51.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D002    Royal Canin X-Small Adult                         1,00kg    Cost: 258,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     30
+Order code:    1638462657574
+User name:     Admin
+Is payd:       true
+Order status:  CANCELLED
+Order date:    2021-12-02 18:30:57.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D001    Royal Canin X-Small Junior                        1,00kg    Cost: 282,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     1
+Order code:    1
+User name:     Yaroslav
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-06 11:28:06.0
+Order notes:   
+    Invoice:
+************************************************************************************************
+1   D009    Royal Canin Energy                               20,00pcs   Cost: 434,00
+2   D008    Royal Canin Maxi Adult                            7,00kg    Cost: 1039,50
+3   D006    Royal Canin Medium Adult                          5,00kg    Cost: 945,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     2
+Order code:    2
+User name:     Guest
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-06 11:28:06.0
+Order notes:   
+    Invoice:
+************************************************************************************************
+1   D003    Royal Canin Mini Junior                           3,00kg    Cost: 678,75
+2   D010    Royal Canin Educ                                 10,00pcs   Cost: 217,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     3
+Order code:    3
+User name:     Guest
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-06 11:28:06.0
+Order notes:   
+    Invoice:
+************************************************************************************************
+1   D010    Royal Canin Educ                                 50,00pcs   Cost: 1085,00
+2   D009    Royal Canin Energy                               50,00pcs   Cost: 1085,00
+3   D008    Royal Canin Maxi Adult                           20,00kg    Cost: 2970,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     7
+Order code:    1636300768198
+User name:     Yaroslav
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-07 17:59:28.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D003    Royal Canin Mini Junior                           1,00kg    Cost: 226,25
+2   D002    Royal Canin X-Small Adult                         2,00kg    Cost: 516,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     13
+Order code:    1636552422284
+User name:     Yaroslav
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-10 15:53:42.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D002    Royal Canin X-Small Adult                         1,00kg    Cost: 258,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     15
+Order code:    1636734337922
+User name:     Admin
+Is payd:       true
+Order status:  CREATED
+Order date:    2021-11-12 18:25:37.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D002    Royal Canin X-Small Adult                         1,00kg    Cost: 258,00
+2   D001    Royal Canin X-Small Junior                        1,00kg    Cost: 282,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     16
+Order code:    1637689843909
+User name:     Cashier
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-23 19:50:43.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     17
+Order code:    1637690743849
+User name:     Cashier
+Is payd:       true
+Order status:  CREATED
+Order date:    2021-11-23 20:05:43.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D001    Royal Canin X-Small Junior                        1,00kg    Cost: 282,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     18
+Order code:    1637691107039
+User name:     Cashier
+Is payd:       true
+Order status:  CREATED
+Order date:    2021-11-23 20:11:47.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D001    Royal Canin X-Small Junior                        1,00kg    Cost: 282,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     23
+Order code:    1637698090255
+User name:     Cashier
+Is payd:       true
+Order status:  CREATED
+Order date:    2021-11-23 22:08:10.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D004    Royal Canin Mini Adult                           10,00kg    Cost: 2162,50
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     25
+Order code:    1637699421609
+User name:     Merchant
+Is payd:       true
+Order status:  CREATED
+Order date:    2021-11-23 22:30:21.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D001    Royal Canin X-Small Junior                       10,00kg    Cost: 2820,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     26
+Order code:    1637748347790
+User name:     Merchant
+Is payd:       true
+Order status:  CREATED
+Order date:    2021-11-24 12:05:47.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D004    Royal Canin Mini Adult                            1,00kg    Cost: 216,25
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     28
+Order code:    1637749371357
+User name:     Admin
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-24 12:22:51.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D001    Royal Canin X-Small Junior                        1,00kg    Cost: 282,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     29
+Order code:    1638290361241
+User name:     Senior cashier
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-30 18:39:21.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     31
+Order code:    1638463438468
+User name:     Cashier
+Is payd:       true
+Order status:  CREATED
+Order date:    2021-12-02 18:43:58.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D001    Royal Canin X-Small Junior                        1,00kg    Cost: 282,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     4
+Order code:    1636300717095
+User name:     Yaroslav
+Is payd:       true
+Order status:  FINISHED
+Order date:    2021-11-07 17:58:37.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D001    Royal Canin X-Small Junior                       50,00kg    Cost: 14100,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     19
+Order code:    1637691260714
+User name:     Cashier
+Is payd:       true
+Order status:  FINISHED
+Order date:    2021-11-23 20:14:20.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D001    Royal Canin X-Small Junior                        1,00kg    Cost: 282,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     21
+Order code:    1637697997955
+User name:     Cashier
+Is payd:       true
+Order status:  FINISHED
+Order date:    2021-11-23 22:06:37.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D003    Royal Canin Mini Junior                          99,00kg    Cost: 22398,75
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     24
+Order code:    1637698544747
+User name:     Cashier
+Is payd:       true
+Order status:  FINISHED
+Order date:    2021-11-23 22:15:44.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D003    Royal Canin Mini Junior                           1,00kg    Cost: 226,25
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     27
+Order code:    1637748624204
+User name:     Admin
+Is payd:       true
+Order status:  FINISHED
+Order date:    2021-11-24 12:10:24.0
+Order notes:   null
+    Invoice:
+************************************************************************************************
+1   D004    Royal Canin Mini Adult                            1,00kg    Cost: 216,25
+************************************************************************************************
+------------------------------------------------------------------------------------------------]
+04-12-2021 15:43:45 ERROR InvoiceService.findInvoiceByOrderNumber, line 190 -> com.epam.project.exceptions.DataNotFoundException: Data not found in DB by specified key
+04-12-2021 15:43:45 ERROR InvoiceService.findInvoiceByOrderNumber, line 190 -> com.epam.project.exceptions.DataNotFoundException: Data not found in DB by specified key
+04-12-2021 15:43:45 INFO InvoiceServiceTest.findInvoicesByUserTest, line 83 -> [
+Order Id =     2
+Order code:    2
+User name:     Guest
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-06 11:28:06.0
+Order notes:   
+    Invoice:
+************************************************************************************************
+1   D003    Royal Canin Mini Junior                           3,00kg    Cost: 678,75
+2   D010    Royal Canin Educ                                 10,00pcs   Cost: 217,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------, 
+Order Id =     3
+Order code:    3
+User name:     Guest
+Is payd:       false
+Order status:  CREATED
+Order date:    2021-11-06 11:28:06.0
+Order notes:   
+    Invoice:
+************************************************************************************************
+1   D010    Royal Canin Educ                                 50,00pcs   Cost: 1085,00
+2   D009    Royal Canin Energy                               50,00pcs   Cost: 1085,00
+3   D008    Royal Canin Maxi Adult                           20,00kg    Cost: 2970,00
+************************************************************************************************
+------------------------------------------------------------------------------------------------]
+04-12-2021 15:43:45 ERROR InvoiceService.findInvoiceByOrderNumber, line 190 -> com.epam.project.exceptions.DataNotFoundException: Data not found in DB by specified key
+04-12-2021 15:43:45 ERROR InvoiceService.findInvoiceByOrderNumber, line 190 -> com.epam.project.exceptions.DataNotFoundException: Data not found in DB by specified key
+04-12-2021 15:43:45 ERROR InvoiceService.findInvoiceByOrderNumber, line 190 -> com.epam.project.exceptions.DataNotFoundException: Data not found in DB by specified key
+04-12-2021 15:43:45 ERROR InvoiceService.findInvoiceByOrderNumber, line 190 -> com.epam.project.exceptions.DataNotFoundException: Data not found in DB by specified key
+04-12-2021 15:43:45 INFO InvoiceServiceTest.close, line 36 -> Closing tests

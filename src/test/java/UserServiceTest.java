@@ -56,7 +56,6 @@ public class UserServiceTest {
 
     /** Product CRUD operations tests */
     @Test
-    @Ignore
     public void testFindUser1() throws UnknownUserException {
         User user = userService.findUser(CORRECT_USER_NAME, CORRECT_USER_PASSWORD);
         log.info(user);
@@ -64,21 +63,18 @@ public class UserServiceTest {
     }
 
     @Test(expected = UnknownUserException.class)
-    @Ignore
     public void testFindUser2() throws UnknownUserException {
         User user = userService.findUser(CORRECT_USER_NAME, "..");
         assertNotNull(user);
     }
 
     @Test
-    @Ignore
     public void testAddUser() throws InterruptedException {
         boolean result = userService.addUser(testUser);
         assertTrue(result);
     }
 
     @Test
-    @Ignore
     public void testUpdateUser() throws UnknownUserException {
         User user = userService.findUser(TEST_USER_NAME, TEST_USER_PASSWORD);
         user.setName("test");
@@ -98,7 +94,6 @@ public class UserServiceTest {
     }
 
     @Test
-    @Ignore
     public void testDeleteUser() throws InterruptedException {
         boolean result  = userService.deleteUser(testUser);
         assertTrue(result);

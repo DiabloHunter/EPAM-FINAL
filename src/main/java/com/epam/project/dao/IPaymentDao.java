@@ -10,19 +10,6 @@ import java.util.List;
  */
 public interface IPaymentDao {
 
-    /**
-     * Calculates total payments number available in DB
-     * @return count of payments in DB
-     * @throws DataNotFoundException if connection is down, broken or unable to retrieve information for certain reasons
-     */
-    Integer calculatePaymentsNumber() throws DataNotFoundException;
-
-    /**
-     * Finds all payments in DB
-     * @return List of all payments
-     * @throws DataNotFoundException if connection is down, broken or unable to retrieve information for certain reasons
-     */
-    List<Payment> findAllPayments() throws DataNotFoundException;
 
     /**
      * Finds all payments in DB by invoice code

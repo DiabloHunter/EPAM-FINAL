@@ -14,6 +14,9 @@ import com.epam.project.service.IProductServ;
 import com.epam.project.service.ServiceFactory;
 import org.apache.log4j.Logger;
 
+import javax.servlet.annotation.WebServlet;
+
+
 public class CommandUpdateProduct implements ICommand {
 
     private static final Logger log = Logger.getLogger(CommandUpdateProduct.class);

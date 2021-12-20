@@ -33,13 +33,6 @@ public interface IProductDao {
      */
     List<Product> findProductsInDB(Integer first, Integer offset) throws DataNotFoundException;
 
-    /**
-     * Finds product in DB by id number
-     * @param id - product id number
-     * @return product by id number
-     * @throws DataNotFoundException if connection is down, broken or unable to retrieve information for certain reasons
-     */
-    Product findProductById(Integer id) throws DataNotFoundException;
 
     /**
      * Finds product in DB by product ordering code
@@ -63,12 +56,6 @@ public interface IProductDao {
      */
     boolean updateProductInDB(Product product);
 
-    /**
-     * Deletes existent product from database by product id number
-     * @param id - product id number
-     * @return true if operation success and false if fails
-     */
-    boolean deleteProductFromDB(Integer id);
 
     /**
      * Deletes existent product from database by product ordering code

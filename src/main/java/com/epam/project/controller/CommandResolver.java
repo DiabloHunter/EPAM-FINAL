@@ -53,6 +53,9 @@ public class CommandResolver {
         commands.put("viewUserProfile", new CommandShowUserDetails()); //useless
         commands.put("openAddNewUserAsAdmin", new CommandOpenAddNewUserAsAdmin());
         commands.put("addNewUserAsAdmin", new CommandAddNewUserAsAdmin());
+        commands.put("CommandGetCashBeforeWork", new CommandGetCashBeforeWork());
+        commands.put("CommandGetCashAfterWork", new CommandGetCashAfterWork());
+
 
     }
 

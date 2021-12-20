@@ -11,6 +11,7 @@ import com.epam.project.service.Button;
 import com.epam.project.service.ITransactionServ;
 import org.apache.log4j.Logger;
 
+import java.sql.Timestamp;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -79,6 +80,21 @@ public class TransactionService implements ITransactionServ {
             throw new TransactionServiceException();
         }
         return transactions;
+    }
+    @Button
+    @Override
+    public String findAllTransactionsByTime(String timestamp) throws TransactionServiceException {
+        String result;
+        try {
+            daoFactory.open();
+            transactionDao = daoFactory.getTransactionDao();
+            result = transactionDao.findAllMoneyByType(timestamp);
+            daoFactory.close();
+        } catch (DataBaseConnectionException | DataNotFoundException ex) {
+            log.error(ex);
+            throw new TransactionServiceException();
+        }
+        return result;
     }
 
 }

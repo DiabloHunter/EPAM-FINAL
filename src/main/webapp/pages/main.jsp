@@ -105,7 +105,8 @@
                 </button>
             </form>
             <form class="menuitem" name="addProductForm" method="post" action="project">
-                <input type="hidden" name="command" value="logout" />
+               <%-- <input type="hidden" name="command" value="logout" />--%>
+                <input type="hidden" name="command" value="CommandGetCashAfterWork" />
                 <button class="menubutton" type="submit">
                     <fmt:message key="main.logout" bundle="${menu}"/>
                 </button>
@@ -181,6 +182,42 @@
     </div>
     <t:colontitle />
 
-
+    <c:if test="${user.name != 'Guest' && user.userRole != 'USER' && user.userRole != 'MERCHANT' && !getCashBeforeWork}">
+        <div id="overlay">
+            <div class="popup">
+                <center>
+                    <h1>Enter the money in the cash machine:</h1>
+                    <form name="getCashBeforeWork" method="post" action="project" >
+                        <input type="hidden" name="command" value="CommandGetCashBeforeWork" />
+                        <input type="text" name="cash" size="6" required/>
+                        <input type="hidden" name="getCashBeforeWork" value="true"/>
+                        <button class="smallbutton" type="submit" name="getCashBeforeWork">
+                            <fmt:message key="main.getCashBeforeWork" bundle="${buttons}"/>
+                        </button>
+                    </form>
+                </center>
+            </div>
+        </div>
+    </c:if>
+    <c:if test="${user.name != 'Guest' && user.userRole != 'USER' && user.userRole != 'MERCHANT' && finishWork}">
+        <div id="overlay">
+            <div class="popup">
+                <center>
+                    <h1>Enter the cash in the cash machine:</h1>
+                    <form name="logout" method="post" action="project" >
+                        <input type="hidden" name="command" value="logout" />
+                        <input type="text" name="cash" size="6" required/>
+                        <button class="smallbutton" type="submit" name="logout">
+                            <fmt:message key="main.getCashBeforeWork" bundle="${buttons}"/>
+                        </button>
+                    </form>
+                </center>
+            </div>
+        </div>
+    </c:if>
+    <script type="text/javascript">
+        var delay_popup = 500;
+        setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
+    </script>
 </body>
 </html>

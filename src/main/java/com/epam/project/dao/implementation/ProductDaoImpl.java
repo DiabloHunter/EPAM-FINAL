@@ -87,11 +87,6 @@ public class ProductDaoImpl extends GenericAbstractDao<Product> implements IProd
     }
 
     @Override
-    public Product findProductById(Integer id) throws DataNotFoundException {
-        return findBy(connection, Product.class, SQL_selectById, id);
-    }
-
-    @Override
     public Product findProductByCode(String code) throws DataNotFoundException {
         return findBy(connection, Product.class, SQL_selectByCode, code);
     }
@@ -106,12 +101,6 @@ public class ProductDaoImpl extends GenericAbstractDao<Product> implements IProd
         Integer id = product.getId();
         return updateInDB(connection, product, SQL_updateProduct, 14, id);
     }
-
-    @Override
-    public boolean deleteProductFromDB(Integer id) {
-        return deleteFromDB(connection, SQL_deleteProductById, id);
-    }
-
     @Override
     public boolean deleteProductFromDB(String code) {
         return deleteFromDB(connection, SQL_deleteProductByCode, code);

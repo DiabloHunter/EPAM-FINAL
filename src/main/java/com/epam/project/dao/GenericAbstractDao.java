@@ -3,10 +3,8 @@ package com.epam.project.dao;
 import com.epam.project.exceptions.DataNotFoundException;
 import org.apache.log4j.Logger;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -77,6 +75,25 @@ public abstract class GenericAbstractDao<T> {
             throw new DataNotFoundException();
         }
         return item;
+    }
+
+    protected  String findByDate(Connection connection, String SQL_selectByParameter, String value)
+            throws DataNotFoundException {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_selectByParameter);
+            addParameterToPreparedStatement(preparedStatement, 1, value);
+            addParameterToPreparedStatement(preparedStatement, 2, new Timestamp(System.currentTimeMillis()));
+            ResultSet resultSet = preparedStatement.executeQuery();
+            String str = resultSet.getString(1);
+            if(str==null){
+                return null;
+            }
+
+            return str;
+        } catch (SQLException sqle) {
+            log.error(sqle);
+            throw new DataNotFoundException();
+        }
     }
 
     protected <V> List<T> findAsListBy(Connection connection, Class t, String SQL_selectByParameter, V value)
@@ -172,5 +189,8 @@ public abstract class GenericAbstractDao<T> {
             preparedStatement.setInt(paramNum, (Integer) value);
         if (value instanceof Long)
             preparedStatement.setLong(paramNum, (Long) value);
+        if (value instanceof Timestamp)
+            preparedStatement.setTimestamp(paramNum, (Timestamp) value);
+
     }
 }

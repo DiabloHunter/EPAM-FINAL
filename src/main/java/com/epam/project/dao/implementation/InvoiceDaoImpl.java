@@ -56,11 +56,6 @@ public class InvoiceDaoImpl extends GenericAbstractDao<Invoice> implements IInvo
     }
 
     @Override
-    public Integer calculateInvoiceNumber() throws DataNotFoundException {
-        return calculateRowCounts(connection, "invoices");
-    }
-
-    @Override
     public List<Invoice> findAllInvoices() throws DataNotFoundException {
         return findAll(connection, Invoice.class, SQL_selectAll);
     }

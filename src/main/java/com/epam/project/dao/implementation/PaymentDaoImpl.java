@@ -55,16 +55,6 @@ public class PaymentDaoImpl extends GenericAbstractDao<Payment> implements IPaym
     }
 
     @Override
-    public Integer calculatePaymentsNumber() throws DataNotFoundException {
-        return calculateRowCounts(connection, "payments");
-    }
-
-    @Override
-    public List<Payment> findAllPayments() throws DataNotFoundException {
-        return findAll(this.connection, Payment.class, SQL_selectAll);
-    }
-
-    @Override
     public List<Payment> findAllPaymentsByOrderCode(Long orderCode) throws DataNotFoundException {
         return findAsListBy(this.connection, Payment.class, SQL_selectByOrderCode, orderCode);
     }

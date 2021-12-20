@@ -10,12 +10,6 @@ import java.util.List;
  */
 public interface IInvoiceDao {
 
-    /**
-     * Calculates total invoices number available in DB
-     * @return count of products in DB
-     * @throws DataNotFoundException if connection is down, broken or unable to retrieve information for certain reasons
-     */
-    Integer calculateInvoiceNumber() throws DataNotFoundException;
 
     /**
      * Finds all invoices in database

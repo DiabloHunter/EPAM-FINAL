@@ -26,7 +26,10 @@ public class CommandValidateUser implements ICommand {
             User user = ServiceFactory.getUserService().findUser(login, password);
             UserCart cart = new UserCart(user.getName());
             result.addSessionAttribute("user", user);
+            result.addSessionAttribute("cash", 0.0);
+            result.addSessionAttribute("getCashBeforeWork", false);
             result.addSessionAttribute("cart", cart);
+            result.addSessionAttribute("finishWork", false);
             result.setPage(conf.getPage("redirect_home"));
         }
         catch (UnknownUserException uue) {

@@ -4,6 +4,7 @@ import com.epam.project.domain.Transaction;
 import com.epam.project.domain.TransactionType;
 import com.epam.project.exceptions.TransactionServiceException;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 public interface ITransactionServ {
@@ -21,4 +22,12 @@ public interface ITransactionServ {
      * @throws TransactionServiceException if unable to retrieve information for certain reasons
      */
     List<Transaction> findAllTransactionsByType(TransactionType type) throws TransactionServiceException;
+
+    /**
+     * Finds money of all transactions till the date
+     * @param timestamp - date and time
+     * @return String of money
+     * @throws TransactionServiceException if unable to retrieve information for certain reasons
+     */
+   String findAllTransactionsByTime(String timestamp) throws TransactionServiceException;
 }

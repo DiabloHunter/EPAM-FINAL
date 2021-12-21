@@ -104,13 +104,22 @@
                     <fmt:message key="main.profile" bundle="${menu}"/>
                 </button>
             </form>
-            <form class="menuitem" name="addProductForm" method="post" action="project">
-               <%-- <input type="hidden" name="command" value="logout" />--%>
-                <input type="hidden" name="command" value="CommandGetCashAfterWork" />
-                <button class="menubutton" type="submit">
-                    <fmt:message key="main.logout" bundle="${menu}"/>
-                </button>
-            </form>
+            <c:if test="${user.name != 'Guest' && user.userRole != 'USER' && user.userRole != 'MERCHANT'}">
+                <form class="menuitem" name="addProductForm" method="post" action="project">
+                    <input type="hidden" name="command" value="CommandGetCashAfterWork" />
+                    <button class="menubutton" type="submit">
+                        <fmt:message key="main.logout" bundle="${menu}"/>
+                    </button>
+                </form>
+            </c:if>
+            <c:if test="${user.name == 'Guest' || user.userRole == 'USER' || user.userRole == 'MERCHANT'}">
+                <form class="menuitem" name="addProductForm" method="post" action="project">
+                    <input type="hidden" name="command" value="logout" />
+                    <button class="menubutton" type="submit">
+                        <fmt:message key="main.logout" bundle="${menu}"/>
+                    </button>
+                </form>
+            </c:if>
         </c:if>
     </div>
     <div>

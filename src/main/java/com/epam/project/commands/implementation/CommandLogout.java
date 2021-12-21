@@ -24,10 +24,10 @@ public class CommandLogout implements ICommand {
         Configuration conf = Configuration.getInstance();
         ExecutionResult result = new ExecutionResult();
         result.setDirection(Direction.REDIRECT);
-        Double cash = Double.parseDouble(content.getRequestParameter("cash")[0]);
+      /*  Double cash = Double.parseDouble(content.getRequestParameter("cash")[0]);
         Double cashBeforeWork =(Double) content.getSessionAttribute("cashBeforeWork");
         Timestamp timeBeforeWork = (Timestamp) content.getSessionAttribute("timeBeforeWork");
-        ITransactionServ transactionServ= ServiceFactory.getTransactionService();
+        ITransactionServ transactionServ= ServiceFactory.getTransactionService();*/
        /* try {
 
             Double sum = Double.parseDouble(transactionServ.findAllTransactionsByTime(timeBeforeWork.toString()));

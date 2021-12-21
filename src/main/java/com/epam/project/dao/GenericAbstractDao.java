@@ -7,6 +7,7 @@ import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 public abstract class GenericAbstractDao<T> {
 
@@ -84,12 +85,8 @@ public abstract class GenericAbstractDao<T> {
             addParameterToPreparedStatement(preparedStatement, 1, value);
             addParameterToPreparedStatement(preparedStatement, 2, new Timestamp(System.currentTimeMillis()));
             ResultSet resultSet = preparedStatement.executeQuery();
-            String str = resultSet.getString(1);
-            if(str==null){
-                return null;
-            }
 
-            return str;
+            return Optional.of(resultSet.getString(1)).orElse("0");
         } catch (SQLException sqle) {
             log.error(sqle);
             throw new DataNotFoundException();

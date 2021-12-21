@@ -5,6 +5,9 @@
 <c:set value="${sessionScope.get(\"locale\").language}" var="lang" scope="page" />
 <fmt:setLocale value="${sessionScope.get(\"locale\")}" />
 <fmt:setBundle basename = "errors" var = "errors"/>
+<fmt:setBundle basename = "buttons" var = "buttons"/>
+
+
 <html>
 <head>
 </head>
@@ -13,9 +16,9 @@
 </style>
 <body>
 <div class = index_div>
-    <form action="/auth" method="post" enctype="multipart/form-data">
-        <h2><fmt:message key = "${errorMessage}" bundle = "${errors}"/></h2>
-        <input type="submit" class="bigbutton" value="Назад" onclick="history.back(); return false;"/>
+    <form action="project" method="post" >
+        <h2><fmt:message key = "generalErr" bundle = "${errors}"/></h2>
+        <input type="submit" class="bigbutton" value="<fmt:message key = "main.back" bundle = "${buttons}"/>" onclick="history.back(); return false;"/>
     </form>
 </div>
 <t:colontitle/>

@@ -19,23 +19,23 @@ public class UserServiceTest {
 
     private static IUserServ userService;
     private static User testUser;
-    private final static String CORRECT_USER_NAME = "Yaroslav";
-    private final static String CORRECT_USER_PASSWORD = "yaroslav";
-    private final static String TEST_USER_NAME = "Somebody";
-    private final static String TEST_USER_PASSWORD = "Else";
+    private final static String CORRECT_USER_NAME = "Vova";
+    private final static String CORRECT_USER_PASSWORD = "vova";
+    private final static String TEST_USER_NAME = "Danil";
+    private final static String TEST_USER_PASSWORD = "danil";
 
     private static final Logger log = Logger.getLogger(UserServiceTest.class);
 
 
     @BeforeClass
-    public static void init() throws UnknownUserException  {
+    public static void init() {
         log.info("Starting tests");
         userService = ServiceFactory.getUserService();
         testUser = createTestUser();
     }
 
     @AfterClass
-    public static void close() throws ProductServiceException {
+    public static void close() {
         try {
             userService.deleteUser(testUser);
         } catch (Exception e) {}
@@ -59,7 +59,7 @@ public class UserServiceTest {
     public void testFindUser1() throws UnknownUserException {
         User user = userService.findUser(CORRECT_USER_NAME, CORRECT_USER_PASSWORD);
         log.info(user);
-        assertTrue(user.getName().equals("Yaroslav"));
+        assertTrue(user.getName().equals("Vova"));
     }
 
     @Test(expected = UnknownUserException.class)
@@ -69,7 +69,7 @@ public class UserServiceTest {
     }
 
     @Test
-    public void testAddUser() throws InterruptedException {
+    public void testAddUser() {
         boolean result = userService.addUser(testUser);
         assertTrue(result);
     }
@@ -94,7 +94,7 @@ public class UserServiceTest {
     }
 
     @Test
-    public void testDeleteUser() throws InterruptedException {
+    public void testDeleteUser() {
         boolean result  = userService.deleteUser(testUser);
         assertTrue(result);
     }

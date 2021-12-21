@@ -29,12 +29,8 @@ public class CommandLogout implements ICommand {
         Timestamp timeBeforeWork = (Timestamp) content.getSessionAttribute("timeBeforeWork");
         ITransactionServ transactionServ= ServiceFactory.getTransactionService();
        /* try {
-            String res = transactionServ.findAllTransactionsByTime(timeBeforeWork.toString());
-            Double sum = 0.0;
-            if(res!=null){
-                sum = Double.parseDouble(res);
-            }
-            *//*Double sum = Double.parseDouble(transactionServ.findAllTransactionsByTime(timeBeforeWork.toString()));*//*
+
+            Double sum = Double.parseDouble(transactionServ.findAllTransactionsByTime(timeBeforeWork.toString()));
             if(sum+cashBeforeWork!=cash){
                 result.addSessionAttribute("finishWork", false);
                 result.addRequestAttribute("errorMessage", conf.getErrorMessage("moneyError"));

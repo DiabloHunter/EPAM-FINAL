@@ -26,7 +26,7 @@ public class ColontitleHandler extends TagSupport {
     }
 
     @Override
-    public int doEndTag() throws JspException {
+    public int doEndTag() {
         return SKIP_BODY;
     }
 }

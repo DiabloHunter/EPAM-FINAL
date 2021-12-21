@@ -17,13 +17,12 @@ import static org.junit.Assert.assertTrue;
 public class TransactionServiceTest {
 
     private static final Logger log = Logger.getLogger(TransactionServiceTest.class);
-    private static Transaction transaction;
     private static Invoice invoice;
     private static IInvoiceServ invoiceService;
     private static ITransactionServ transactionService;
 
     @BeforeClass
-    public static void init() throws TransactionServiceException {
+    public static void init() {
         invoiceService = ServiceFactory.getInvoiceService();
         transactionService = ServiceFactory.getTransactionService();
         invoice = invoiceService.findInvoiceByOrderNumber(1L);
